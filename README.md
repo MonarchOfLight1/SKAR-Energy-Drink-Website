@@ -1,224 +1,152 @@
+# ⚡ Project Skar
 
-"FOR CHECKPOINT 4 There is a different READMEcheckpoint4.md"
+A full-stack e-commerce web application developed as part of a university group project. Project Skar is a fictional energy drink brand website that allows users to browse products, create accounts, log in securely, leave reviews, and purchase products through a responsive online storefront.
 
+This project was built collaboratively to demonstrate modern web development concepts, including responsive front-end design, database integration, RESTful APIs, user authentication, and team-based software development using Git and GitHub.
 
-API Documentation
+---
 
-1. Create a Skar Account
-    URL: /api/signup.php
+## Features
 
-    Method: POST
+- Responsive user interface built with Bootstrap
+- User registration and login system
+- Secure session-based authentication
+- Product catalog with dynamic content
+- Customer review functionality
+- Shopping cart and checkout system
+- About and FAQ pages
+- REST API endpoints for products and reviews
+- Database-driven application using MySQL
 
-    Description: Registers a new SKAR user account.
+---
 
-    Request Body (JSON):
-        {
-            "email": "dog@gmail.com",
-            "password": "123",
-            "address": "8 Fastfood crescent",
-            "city": "Brampton",
-            "province": "Ontario",
-            "postalcode": "ABCDEF"
-        }
+## Technologies Used
 
-    Response Body (JSON):
+### Front End
 
-        {
-            "message": "Account created successfully"
-        }
+- HTML5
+- CSS3
+- SCSS (Sass)
+- Bootstrap 5
+- JavaScript
 
- 2. Login with Existing SKAR Account
+### Back End
 
-    URL: /api/login.php
+- PHP
+- MySQL
+- RESTful API
 
-    Method: POST
+### Development Tools
 
-    Description: Authenticates a user and returns user details.
+- Git
+- GitHub
+- Postman
+- REST Client
 
-    Request Body (JSON):        
-            {
-                "email": "dog@gmail.com",
-                "password": "123"
-            }
+---
 
-    Response Body:
-        {
-            "message": "Login successful",
-            "user_id": "1"
-        }
+## My Contributions
 
-3. Add a New Product
+As part of the development team, I contributed primarily to the back-end implementation and project documentation.
 
-    URL: /api/product.php
+My responsibilities included:
 
-    Method: POST
+- Developed REST API endpoints for Products and Reviews using PHP.
+- Implemented GET and POST operations for API resources.
+- Designed and created the project's MySQL database consisting of four relational tables.
+- Populated the database with application data.
+- Updated the logout endpoint.
+- Tested API endpoints using Postman and REST Client.
+- Created, maintained, and finalized the project's README and technical documentation.
+- Collaborated with teammates using Git and GitHub throughout the project lifecycle.
 
-    Description: Adds a new product to the SKAR database inside product table.
+---
 
-    Request Body (JSON):
+## Project Structure
 
-        {
-            "product_name": "Mango Blaze",
-            "product_price": 49.99,
-            "product_quantity": 14,
-            "description": "Mango Fruity Blaze"
-        }
-    Response body:
-        {
-            "message": "Product added successfully"
-        }
+```
+Project-Skar/
+│
+├── api/
+├── assets/
+├── css/
+├── js/
+├── php/
+├── scss/
+├── includes/
+├── images/
+├── pages/
+├── README.md
+└── index.php
+```
 
-4. Get All Products
+---
 
-    URL: /api/product.php
+## Getting Started
 
-    Method: GET
+### Prerequisites
 
-    Description: Retrieves a list of all products in the database.
+- PHP
+- MySQL
+- Apache (XAMPP, WAMP, or MAMP)
+- Git
 
-    Response Body (JSON):
+### Installation
 
-        [
-            {
-                "product_id": "1",
-                "product_name": "Mango Blaze",
-                "product_price": "50.00",
-                "product_quantity": "14",
-                "description": "Mango Fruity Blaze"
-            },
-            {
-                "product_id": "2",
-                "product_name": "Red Surge",
-                "product_price": "10.99",
-                "product_quantity": "50",
-                "description": "Refreshing red drink"
-            },
-            {
-                "product_id": "3",
-                "product_name": "Blue Ice",
-                "product_price": "12.49",
-                "product_quantity": "40",
-                "description": "Cool blue beverage"
-            },
-            {
-                "product_id": "4",
-                "product_name": "Grape Shock",
-                "product_price": "11.25",
-                "product_quantity": "30",
-                "description": "Sweet grape flavored drink"
-            },
-            {
-                "product_id": "5",
-                "product_name": "Citrus Burst",
-                "product_price": "9.99",
-                "product_quantity": "60",
-                "description": "Tangy citrus drink"
-            },
-            {
-                "product_id": "6",
-                "product_name": "Green Strike",
-                "product_price": "13.50",
-                "product_quantity": "35",
-                "description": "Energetic green drink"
-            },
-            {
-                "product_id": "7",
-                "product_name": "Grey Lime",
-                "product_price": "10.99",
-                "product_quantity": "50",
-                "description": "Refreshing lime drink"
-            },
-            {
-                "product_id": "8",
-                "product_name": "Tangy RaspBerry",
-                "product_price": "41.99",
-                "product_quantity": "14",
-                "description": "Raspberry Fruity Blaze"
-            }
-        ]
+1. Clone the repository
 
-5. Post a Review
+```bash
+git clone https://github.com/yourusername/project-skar.git
+```
 
-        URL: /api/review.php
+2. Move the project into your web server directory.
 
-        Method: POST
+3. Create a MySQL database.
 
-        Description: Adds a review for a product by a SKAR user.
+4. Import the provided SQL database.
 
-        Request Body (JSON):
+5. Update the database connection settings if necessary.
 
-            {
-                "skar_id": 1,
-                "product_id": 1,
-                "rating": 5,
-                "review_text": "Love this! Super refreshing."
-            }
+6. Start Apache and MySQL.
 
-        Response body (JSON):
+7. Open your browser and navigate to:
 
-            {
-                "message": "Review added successfully"
-            
-            }
+```
+http://localhost/project-skar
+```
 
-6. Get all Reviews:
-        Get All Reviews
+---
 
-        URL: /api/review.php
+## What I Learned
 
-        Method: GET
+Working on this project provided practical experience with:
 
-        Description: Retrieves all product reviews from the database.
+- Full-stack web development
+- PHP application development
+- REST API design
+- MySQL database design
+- Session-based authentication
+- Testing APIs using Postman
+- Technical documentation
+- Git version control
+- Collaborative software development
 
-        Response Body (JSON):
-                [
-                    {
-                        "review_id": "1",
-                        "skar_id": "1",
-                        "product_id": "1",
-                        "rating": "5",
-                        "review_text": "Love this! Super refreshing.",
-                        "created_at": "2026-02-26 23:54:21"
-                    },
-                    {
-                        "review_id": "2",
-                        "skar_id": "2",
-                        "product_id": "2",
-                        "rating": "4",
-                        "review_text": "Nice taste, but a bit too sweet for me.",
-                        "created_at": "2026-02-26 23:54:26"
-                    },
-                    {
-                        "review_id": "3",
-                        "skar_id": "2",
-                        "product_id": "2",
-                        "rating": "4",
-                        "review_text": "Nice taste, but a bit too sweet for me.",
-                        "created_at": "2026-02-26 23:54:31"
-                    },
-                    {
-                        "review_id": "4",
-                        "skar_id": "1",
-                        "product_id": "3",
-                        "rating": "3",
-                        "review_text": "It\u2019s okay, not my favorite.",
-                        "created_at": "2026-02-26 23:54:35"
-                    },
-                    {
-                        "review_id": "5",
-                        "skar_id": "2",
-                        "product_id": "6",
-                        "rating": "4",
-                        "review_text": "Nice",
-                        "created_at": "2026-02-27 00:34:51"
-                    }
-                ]
+---
 
-POSSIBLE STATUS CODES:
+## Future Improvements
 
-200 ---->	Request succeeded (used for GET and successful actions).
-201 -----> Created	Resource created successfully (used for POST requests like signup or adding a product).
-400 -----> Bad Request	Invalid request or missing required fields.
-401 -----> Unauthorized	Authentication failed (wrong login credentials).
+Potential enhancements include:
 
-The Above Responses were generated by using POSTMAN and requests.rest(REST CLIENT EXTENSION) that has been pushed to github 
+- Product search and filtering
+- Order history for users
+- Admin dashboard
+- Improved form validation
+- Password reset functionality
+- Payment gateway integration
+- Automated testing
+
+---
+
+## Acknowledgements
+
+This application was developed as a university group project for educational purposes. It was completed collaboratively using Git and GitHub, with team members contributing to different areas of the application.
