@@ -1,0 +1,112 @@
+### CREATE A SKAR ACCOUNT with all YOUR INFORMATION
+POST http://localhost:80/course-project-group-7/Project_Skar/api/signup.php
+content-type: application/json
+
+{
+    "email": "cat@gmail.com",
+    "password": "456",
+    "address": "8 Fastfood crescent",
+    "city": "Brampton",
+    "province": "Ontario",
+    "postalcode": "ABCDEF"
+}
+### LOGIN WITH YOUR EXISTING SKAR EMAIL AND PASSWORD
+POST http://localhost:80/course-project-group-7/Project_Skar/api/login.php
+content-type: application/json
+
+{
+    "email":"dog@gmail.com",
+    "password":"123"
+}
+
+
+### Add a product to database
+POST http://localhost:80/course-project-group-7/Project_Skar/api/product.php
+content-type: application/json
+
+{
+  "product_name": "Tangy RaspBerry",
+  "product_price": 41.99,
+  "product_quantity": 14,
+  "description": "Raspberry Fruity Blaze"
+}
+
+### POST review for a product 1
+POST http://localhost/course-project-group-7/Project_Skar/api/review.php
+Content-Type: application/json
+
+{
+  "skar_id": 1,
+  "product_id": 1,
+  "rating": 5,
+  "review_text": "Love this! Super refreshing."
+}
+
+###
+
+### POST review for product id 2 with a different user
+POST http://localhost/course-project-group-7/Project_Skar/api/review.php
+Content-Type: application/json
+
+{
+  "skar_id": 2,
+  "product_id": 6,
+  "rating": 4,
+  "review_text": "Nice"
+}
+
+###
+
+
+
+### GET all reviews
+GET http://localhost/course-project-group-7/Project_Skar/api/review.php
+
+### POST endpoint to add a new product
+POST http://localhost/course-project-group-7/Project_Skar/api/product.php
+Content-Type: application/json
+
+{
+  "product_name": "Grey Lime",
+  "product_price": 10.99,
+  "product_quantity": 50,
+  "description": "Refreshing lime drink"
+}
+
+### Get endpoint to view all products
+GET http://localhost/course-project-group-7/Project_Skar/api/product.php
+
+
+
+//Checkpoint 4
+###
+POST http://localhost/course-project-group-7/Project_Skar/api/add_to_cart.php
+
+###
+POST http://localhost/course-project-group-7/Project_Skar/api/clear_cart.php
+
+###
+GET http://localhost/course-project-group-7/Project_Skar/api/get_cart_count.php
+
+###
+GET http://localhost/course-project-group-7/Project_Skar/api/get_cart.localhost/myshop/api/products.php
+
+###
+POST http://localhost/course-project-group-7/Project_Skar/api/login.php
+
+# {
+#   "email": "abc@gmail.com",
+#   "password": "abc"
+# }
+
+###
+POST http://localhost/course-project-group-7/Project_Skar/api/remove_item.php
+
+###
+GET http://localhost/course-project-group-7/Project_Skar/api/signup.php
+
+# {
+#   "username": "def",
+#   "email":"def@gmail.com",
+#   "password": "def"
+# }

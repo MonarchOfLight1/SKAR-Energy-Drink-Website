@@ -1,0 +1,20 @@
+{
+  "name": "project_skar",
+  "version": "1.0.0",
+  "description": "\"Skar_Project for Web Data management\"",
+  "repository": {
+    "type": "git",
+    "url": "\"https://github.com/AlgomaU-AT/course-project-group-7\""
+  },
+  "license": "ISC",
+  "author": "Arpan Shon Kabir",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "sass-build": "sass --no-source-map scss:css"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.8",
+    "sass": "^1.97.3"
+  }
+}
